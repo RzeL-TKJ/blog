@@ -180,17 +180,17 @@ Baru Naek Ke Kelas 5... :v.
 
 Maen Game Terus Tiap Hari...
 Gak Bosen Bosen... :v.</tw-passagedata><tw-passagedata pid="6" name="Main" tags="" position="725,100" size="100,100">&lt;a href=&quot;?Main&quot;&gt;RzeL 100Blog&lt;/a&gt;&lt;&lt;include &quot;Setup2&quot;&gt;&gt;&lt;hr&gt;
-&lt;&lt;link &quot;Profile&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Games&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Project&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Support&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;textbox &quot;$s&quot; &quot;&quot;&gt;&gt; &lt;&lt;button &quot;Search&quot;&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?s1|&quot; + State.getVar(&quot;$s&quot;)&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;link &quot;Profile&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Games&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Project&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Support&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;textbox &quot;$s&quot; &quot;&quot;&gt;&gt; &lt;&lt;button &quot;Search&quot;&gt;&gt;&lt;&lt;run window.location.href = &quot;?s1|&quot; + State.getVar(&quot;$s&quot;)&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;if $rawData.first() == &quot;b&quot;&gt;&gt;&lt;&lt;include &quot;Blog&quot;&gt;&gt;&lt;&lt;elseif $rawData.first() == &quot;s&quot;&gt;&gt;&lt;&lt;include &quot;Results&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Normal&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;This Is Footer :3&lt;/span&gt;</tw-passagedata><tw-passagedata pid="7" name="Normal" tags="" position="850,100" size="100,100">&lt;hr&gt;&lt;&lt;if $nextPage == 0&gt;&gt;
 \
-\&lt;&lt;for _i to $page - 10; _i lt $blogList.length; _i++&gt;&gt;&lt;&lt;set _a to &#39;blog.html?b&#39;+$blogList[_i][0]&gt;&gt;
+\&lt;&lt;for _i to $page - 10; _i lt $blogList.length; _i++&gt;&gt;&lt;&lt;set _a to &#39;?b&#39;+$blogList[_i][0]&gt;&gt;
 &lt;&lt;link $blogList[_i][1]&gt;&gt;&lt;&lt;run window.location.href = State.getVar(&quot;_a&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;
 $blogList[_i][2]
 
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
 \
-\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
 \
 \&lt;&lt;else&gt;&gt;
 \
@@ -201,7 +201,7 @@ $blogList[_i][2]
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
 \
-\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Next Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) + 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;
+\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Next Page&quot;&gt;&gt;&lt;&lt;set $data to parseInt($sPage, 10) + 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?p&quot;+$data&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;
 \
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Results" tags="" position="975,100" size="100,100">Search Result For : $s_s&lt;hr&gt;&lt;&lt;if $nextPage == 0&gt;&gt;
 \
@@ -212,7 +212,7 @@ $resultList[_i][2]
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
 \
-\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
 \
 \&lt;&lt;else&gt;&gt;
 \
@@ -223,7 +223,7 @@ $resultList[_i][2]
 &lt;hr&gt;
 &lt;&lt;/for&gt;&gt;
 \
-\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Next Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) + 1&gt;&gt;&lt;&lt;run window.location.href = &quot;blog.html?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;
+\&lt;&lt;if $page &gt; 10&gt;&gt;&lt;&lt;link &quot;Previous Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) - 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Next Page&quot;&gt;&gt;&lt;&lt;set $data[0] to parseInt($data[0], 10) + 1&gt;&gt;&lt;&lt;run window.location.href = &quot;?s&quot;+$data[0]+&quot;|&quot; + State.getVar(&quot;$data[1]&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;hr&gt;
 \
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Blog" tags="" position="1100,100" size="100,100">&lt;hr&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;$theData[1]&lt;/b&gt;&lt;/span&gt;
 
