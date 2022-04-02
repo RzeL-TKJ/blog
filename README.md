@@ -1,4 +1,7 @@
 # 100Blog
+```
+Kinda Lame... But It's A Fun Project Tho... :3.
+```
 It's My Project About Creating...
 The Simple And Easy Way To Do Blog On Static Website... :3.
 
